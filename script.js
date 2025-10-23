@@ -7,6 +7,14 @@ navBarToggle.addEventListener('click', () => {
     navbarMenu.classList.toggle('active');
 });
 
+const textarea = document.querySelector('textarea');
+const minHeight = 20; // set your initial min-height in px
+
+textarea.addEventListener('input', () => {
+    textarea.style.height = minHeight + 'px';      // reset to min height
+    textarea.style.height = textarea.scrollHeight + 'px'; // grow to fit content
+});
+
 
 
 
