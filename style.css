@@ -362,10 +362,11 @@ html, body {
 
 }
 
-@media (min-width: 500px) {
+@media (min-width: 400px) {
   body, .about-body {
     background-attachment: fixed;
   }
 }
         
+
 
