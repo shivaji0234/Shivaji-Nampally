@@ -7,6 +7,15 @@ body {
     background-position: center;
 }
 
+.about-body {
+    font-family: "Jost", serif;
+    min-height: 100vh;
+    background: url('pexels-pixabay-33109.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 .navbar {
     display: flex;
     align-items: center;
@@ -196,3 +205,4 @@ textarea {
   'GRAD' 0,
   'opsz' 24
 }
+
