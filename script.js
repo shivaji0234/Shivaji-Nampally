@@ -23,3 +23,15 @@ function loadPage(page) {
         });
     }
     window.onload = () => loadPage('home');
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const logoName = document.querySelector(".logo-name");
+    const logoAbout = document.querySelector(".logo-about");
+
+    logoName.addEventListener("click", () => {
+      logoName.classList.toggle("active");
+      logoAbout.classList.toggle("deactivate");
+    });
+  });
+
