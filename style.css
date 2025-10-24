@@ -1,21 +1,138 @@
+
 body {
-    font-family: "Jost", serif;
-    min-height: 100vh;
-    background: url('pexels-krisof-1252869.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  font-family: "Jost", serif;
+  min-height: 100vh;
+  background: url('pexels-krisof-1252869.jpg') no-repeat center center / cover;
+  background-attachment: fixed; 
+  scrollbar-;
 }
 
 .about-body {
-    font-family: "Jost", serif;
-    min-height: 100vh;
-    background: url('pexels-pixabay-33109.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  min-height: 100%;
+  background: url('pexels-pixabay-33109.jpg') no-repeat center center / cover;
+  background-attachment: fixed;
 }
 
+.class-about {
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+}
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5px;
+  width: 100%;
+  max-width: 1600px;
+  height: auto; /* takes full viewport height */
+  border-radius: 20px;
+  background: transparent;
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 10px;/* ensures padding doesn't break width */
+}
+
+.main-container h1 {
+  color: #fff;
+  text-align: center;
+}
+
+.logo-about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  height: 320px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  box-shadow: 0 0 30px rgba(0, 255, 200, 0.3),
+              inset 0 0 15px rgba(255, 21, 0, 0.799);
+  animation: float 4s ease-in-out infinite alternate;
+}
+
+.logo-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 255, 200, 0.8);
+  color: #00ffc8;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 0 15px rgba(0, 255, 200, 0.8),
+               0 0 30px rgba(0, 255, 200, 0.4);
+  box-shadow: 0 0 25px rgba(0, 255, 200, 0.4),
+              inset 0 0 10px rgba(0, 255, 200, 0.2);
+  transition: all 0.3s ease;
+}
+.logo-name:hover,
+.logo-name.active {
+  box-shadow: 0 0 40px rgba(0, 255, 200, 0.985),
+              inset 0 0 20px rgba(0, 255, 200, 1);
+  transform: scale(1.5);
+}
+
+/* Background fades away on hover or when clicked */
+.logo-about:hover,
+.logo-about.deactivate {
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-20px);
+  }
+}
+.heading-about {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 800px;
+    height: auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    background: transparent;
+    backdrop-filter: blur(30px);
+    z-index: 999;
+    padding: 20px;
+}
+.heading-about p {
+    font-size: 20px;
+    color: #fff;
+    
+}
+
+.parent-footer-about {
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-about {
+    display: flex;
+    max-width: 1600px;
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    backdrop-filter: blur(8px);
+    margin: 10px;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 0;
+}
 .navbar {
     display: flex;
     align-items: center;
@@ -206,3 +323,42 @@ textarea {
   'opsz' 24
 }
 
+@media (max-width: 500px) { 
+    .main-container { 
+        margin: 10px;
+        height: auto;
+        display: flex; 
+        align-items: 
+        center; 
+        flex-direction: column; 
+        justify-content: space-around; 
+        gap: 5px; 
+        padding: 15px; 
+    } 
+    .heading-about { 
+        padding: 10px; 
+        font-size: 10px; 
+        width: 100%; 
+        height: auto;
+        margin: 5px; 
+    } 
+        .logo-about { 
+            width: 100%; 
+        }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+* {
+  scrollbar-width: none; /* hides scrollbar */
+}
+
+* {
+  -ms-overflow-style: none; 
+}
+
+
+        
