@@ -15,20 +15,11 @@ textarea.addEventListener('input', () => {
     textarea.style.height = textarea.scrollHeight + 'px'; // grow to fit content
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function loadPage(page) {
+      fetch(page + '.html')
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById('main-content').innerHTML = html;
+        });
+    }
+    window.onload = () => loadPage('home');
