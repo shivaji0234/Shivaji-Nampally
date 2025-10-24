@@ -3,15 +3,15 @@ body {
   font-family: "Jost", serif;
   min-height: 100vh;
   background: url('pexels-krisof-1252869.jpg') no-repeat center center / cover;
-  background-attachment: fixed; 
-  scrollbar-;
+  /* background-attachment: fixed;  Remove here */
 }
 
 .about-body {
   min-height: 100%;
   background: url('pexels-pixabay-33109.jpg') no-repeat center center / cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; Remove here */
 }
+
 
 .class-about {
     text-align: center;
@@ -347,18 +347,24 @@ textarea {
         }
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
-
 
 * {
-  scrollbar-width: none; /* hides scrollbar */
+  -ms-overflow-style: none;    
+  scrollbar-width: none;        
+
+*::-webkit-scrollbar {
+  display: none;                
 }
 
-* {
-  -ms-overflow-style: none; 
+html, body {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;           
+
 }
 
-
+@media (min-width: 768px) {
+  body, .about-body {
+    background-attachment: fixed;
+  }
+}
         
