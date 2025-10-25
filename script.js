@@ -1,37 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" as="image" href="pexels-krisof-1252869.jpg">
+    <link rel="preload" as="image" href="pexels-pixabay-33109.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_upward" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes = "192x192" href="logo.png" class="title-logo">
+    <title>Shivaji Nampally</title>
+</head>
+<body class="home-body">
+    <header>
+        <nav class = "navbar">
+            <div class="navbar-container">
+                <a href="index.html" class="navlogo">HealthAI</a>
+                <button class="navbar-toggle">
+                    <span class = "bar"></span>
+                    <span class = "bar"></span>
+                    <span class = "bar"></span>
+                </button>
+                <ul class="navbar-menu">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="about.html" onclick="loadpage('About')">About</a></li>
+                    <li><a href="services.html" onclick="loadpage('Services')">Services</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Content</a></li>
+                    <li><a href="#">History</a></li>
+                </ul>
+            </div>
 
-const navBarToggle = document.querySelector('.navbar-toggle');
-const navbarMenu = document.querySelector('.navbar-menu');
-
-navBarToggle.addEventListener('click', () => {
-    navBarToggle.classList.toggle('active');
-    navbarMenu.classList.toggle('active');
-});
-
-const textarea = document.querySelector('textarea');
-const minHeight = 20; // set your initial min-height in px
-
-textarea.addEventListener('input', () => {
-    textarea.style.height = minHeight + 'px';      // reset to min height
-    textarea.style.height = textarea.scrollHeight + 'px'; // grow to fit content
-});
-
-function loadPage(page) {
-      fetch(page + '.html')
-        .then(response => response.text())
-        .then(html => {
-          document.getElementById('main-content').innerHTML = html;
-        });
-    }
-    window.onload = () => loadPage('home');
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    const logoName = document.querySelector(".logo-name");
-    const logoAbout = document.querySelector(".logo-about");
-
-    logoName.addEventListener("click", () => {
-      logoName.classList.toggle("active");
-      logoAbout.classList.toggle("deactivate");
-    });
-  });
-
+        </nav>
+    </header>
+    <form class = "form-input">
+        <div class="form-container">
+            <textarea  id="user-input" class="text-form" placeholder="Ask HealthAI" rows="1"></textarea>
+            <button type="submit" class="form-button" id="button"><span class="material-symbols-outlined">
+arrow_upward
+</span></button>
+        </div>
+    </form>
+</body>
+<script src="script.js"></script>
+</html>
