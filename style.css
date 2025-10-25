@@ -1,5 +1,5 @@
 
-body {
+.home-body {
   font-family: "Jost", serif;
   min-height: 100vh;
   background: url('pexels-krisof-1252869.jpg') no-repeat center center / cover;
@@ -12,11 +12,25 @@ body {
   /* background-attachment: fixed; Remove here */
 }
 
+.services-body {
+  min-height: 100vh;
+  background-color: grey;
+  background: url('servecesBack.jpg') no-repeat center center / cover;
+  display: flex;
+  flex-direction: column;
+  
+}
 
 .class-about {
     text-align: center;
     color: #fff;
     font-size: 30px;
+}
+
+.services-main-wrapper {
+  flex: 1;
+  display: flex;
+  place-items: center;
 }
 .main-container {
   display: flex;
@@ -25,13 +39,13 @@ body {
   margin-top: 5px;
   width: 100%;
   max-width: 1600px;
-  height: auto; /* takes full viewport height */
+  height: auto; 
   border-radius: 20px;
   background: transparent;
   backdrop-filter: blur(8px);
   padding: 20px;
   box-sizing: border-box;
-  gap: 10px;/* ensures padding doesn't break width */
+  gap: 10px;
 }
 
 .main-container h1 {
@@ -52,6 +66,71 @@ body {
   box-shadow: 0 0 30px rgba(0, 255, 200, 0.3),
               inset 0 0 15px rgba(255, 21, 0, 0.799);
   animation: float 4s ease-in-out infinite alternate;
+}
+
+.services-main-container {
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: 200px 200px;
+  grid-template-areas: 
+  "box-1 box-1 box-2 box-3"
+  "box-1 box-1 box-4 box-5";
+  max-width: 900px;
+  height: auto;
+  width: fit-content;
+  border-radius: 10px;
+  border: 1px solid grey;
+  margin: 0 auto;
+  padding: 10px;
+  gap: 1em;
+  
+}
+
+.services-chaild-container {
+  color: #fff;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid grey;
+  padding: 2em;
+  backdrop-filter: blur(10px);
+}
+
+@media (max-width: 42em) {
+  .services-main-container {
+    grid-template-columns: repeat(2, 153px);
+    grid-template-rows: repeat(4, 153px);
+    grid-template-areas: 
+    "box-1 box-1"
+    "box-1 box-1"
+    "box-2 box-3"
+    "box-4 box-5";
+  }
+
+  #box-1 {
+    border-radius: 10px;
+  }
+  #box-2 {
+    border-top-left-radius: 10px;
+  }
+  #box-4 {
+    border-bottom-left-radius: 10px;
+  }
+  #box-5 {
+    border-bottom-right-radius: 10px;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
+  .services-main-container {
+    width: 100%; 
+    max-width: 500px;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 22.5vh);
+  }
 }
 
 .logo-name {
@@ -77,9 +156,31 @@ body {
   box-shadow: 0 0 40px rgba(0, 255, 200, 0.985),
               inset 0 0 20px rgba(0, 255, 200, 1);
   transform: scale(1.5);
+  color: rgba(0, 255, 200, 0.985);
 }
 
-/* Background fades away on hover or when clicked */
+.logo-name span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.logo-name:hover span, .logo-name.active span  {
+  animation: wave 0.6s ease-in-out forwards;
+}
+
+.logo-name span:nth-child(1) { animation-delay: 0s; }
+.logo-name span:nth-child(2) { animation-delay: 0.05s; }
+.logo-name span:nth-child(3) { animation-delay: 0.1s; }
+.logo-name span:nth-child(4) { animation-delay: 0.15s; }
+.logo-name span:nth-child(5) { animation-delay: 0.2s; }
+.logo-name span:nth-child(6) { animation-delay: 0.25s; }
+.logo-name span:nth-child(7) { animation-delay: 0.3S; }
+
+@keyframes wave {
+  0%, 100% { transform: scale(1.5); }
+  50% { transform: scale(2); color: #00bfff; text-shadow: 0 0 10px #00bfff; }
+}
+
 .logo-about:hover,
 .logo-about.deactivate {
   background: transparent;
@@ -350,7 +451,8 @@ textarea {
 
 * {
   -ms-overflow-style: none;    
-  scrollbar-width: none;        
+  scrollbar-width: none;
+}        
 
 *::-webkit-scrollbar {
   display: none;                
@@ -363,10 +465,10 @@ html, body {
 }
 
 @media (min-width: 400px) {
-  body, .about-body {
-    background-attachment: fixed;
+  .home-body, .about-body, .services-body {
+  background-attachment: fixed;
   }
 }
+
+
         
-
-
