@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Services</title>
+</head>
+<body class="services-body">
+    <header>
+        <nav class = "navbar">
+            <div class="navbar-container">
+                <a href="index.html" class="navlogo">HealthAI</a>
+                <button class="navbar-toggle">
+                    <span class = "bar"></span>
+                    <span class = "bar"></span>
+                    <span class = "bar"></span>
+                </button>
+                <ul class="navbar-menu">
+                    <li><a href="index.html" onclick="loadpage('Home')">Home</a></li>
+                    <li><a href="about.html" onclick="loadpage">About</a></li>
+                    <li><a href="services.html" class="active"  onclick="loadpage">Services</a></li>
+                    <li><a href="#" onclick="loadpage">Blog</a></li>
+                    <li><a href="#" onclick="loadpage">Content</a></li>
+                    <li><a href="#" onclick="loadpage">History</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="services-main-wrapper">
+        <div class="services-main-container">
+        <div class="services-chaild-container" style="grid-area: box-1; border-top-left-radius: 10px; border-bottom-left-radius: 10px"; id =  "box-1">1</div>
+        <div class="services-chaild-container" style="grid-area: box-2" id = "box-2">2</div>
+        <div class="services-chaild-container" style="grid-area: box-3; border-top-right-radius: 10px"; id = "box-3">3</div>
+        <div class="services-chaild-container" style="grid-area: box-4" id ="box-4">4</div>
+        <div class="services-chaild-container" style="grid-area: box-5; border-bottom-right-radius: 10px"; id = "box-5">5</div>
+        </div>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
