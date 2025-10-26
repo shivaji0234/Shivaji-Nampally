@@ -15,15 +15,7 @@ textarea.addEventListener('input', () => {
     textarea.style.height = textarea.scrollHeight + 'px'; 
 });
 
-function loadPage(page, event) {
-  event.preventDefault();
-  fetch(page + '.html')
-    .then(response => response.text())
-    .then(html => {
-      const main = document.getElementById('main-content');
-      if (main) main.innerHTML = html;
-    });
-}
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
